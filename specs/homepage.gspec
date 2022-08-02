@@ -7,11 +7,17 @@
     cr            xpath         //div[contains(text(),'2022')]/text()
 
     legal_menu-*        xpath         //*[@id="root"]/section/div[4]/div/div/div[1]/div/div[2]/div/ul/li/a
+    <!-- мы к оригинальному пути //*[@id="root"]/section/div[4]/div/div/div[1]/div/div[2]/div/ul добавили /li/a
+    чтоб тест бегал по элементам списка-->
 
 #    imprint             xpath         //div[2]/div/ul/li/a
 #    privacy_policy      xpath         //div[2]/div/ul/li[2]/a
 #    terms&conditions    xpath         //div[2]/div/ul/li[3]/a
 #    cookies             xpath         //div[2]/div/ul/li[4]/a
+
+#   facebook            xpath           //a[contains(@href,'facebook.com')
+#   twitter             xpath           //a[contains(@href,'twitter.com')
+#   instagram           xpath           //a[contains(@href,'instagramk.com')
 
 ========================================
 # Validation on desktop resolutions
@@ -29,10 +35,15 @@
 #     height ~ 37px
 #      width ~ 165px
 
-= LEGAL section =
-#    imprint:
-#      above privacy_policy 15 to 20px
+= SOCIAL section =
+#    facebook:
+#       left-of twitter ~ 18px
+#    twitter:
+#       left-of instagram ~ 18px
+#    instagram:
+#        right-of twitter ~ 18px
 
+= LEGAL section =
     @for [1 - 3] as index
         legal_menu-${index}:
             above legal_menu-${index + 1} 15 to 20px
