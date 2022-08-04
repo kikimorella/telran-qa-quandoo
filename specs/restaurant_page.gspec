@@ -1,0 +1,32 @@
+# This covers Quandoo Restaurant Page Visual Testing
+========================================
+@objects
+    find_button                 xpath      //*[@data-qa="button-search-find-header"]
+    language_selector           xpath      //div[@data-qa='lang-selector-toggle']
+    listing_header              xpath      //div[@data-qa='listing-header']
+    log_in                      xpath      //div[@data-qa='header-login-btn']
+    guest_amount                xpath      //*[@data-qa="widget-guest-amount-dropdown-selection"]
+
+    data                        xpath      //*[@data-qa="widget-date-picker-selection"]
+    reviews_description_text    xpath      //a[contains(text(),'Wonderful')]
+    reviews_description         xpath      //*[@data-qa="reviews-description"]
+    reviews-amount              xpath      //*[@data-qa="reviews-amount"]
+    reservation_btn             css        .reservation-tab-btn
+    choose_a_time               xpath      //div[contains(@class, 'widget-time-picker-head')]
+
+========================================
+# Validation on desktop resolutions
+@on desktop
+========================================
+
+    guest_amount:
+        width 300 to 350px
+
+    reviews_description:
+        text is "${local.review.text}"
+
+    reservation_btn:
+        text is "${local.reservation.btn}"
+
+    choose_a_time:
+        text is "${local.choose.time.text}"

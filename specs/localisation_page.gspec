@@ -1,0 +1,35 @@
+# This covers Quandoo Restaurant Page Visual Testing
+========================================
+@objects
+    breadcrumbs                 xpath      //div[@data-qa='breadcrumbs']
+    find_button                 xpath      //*[@data-qa="button-search-find-header"]
+    language_selector           xpath      //div[@data-qa='lang-selector-toggle']
+    listing_header              xpath      //div[@data-qa='listing-header']
+    log_in                      xpath      //div[@data-qa='header-login']
+    nearby-filter               xpath      //*[@data-qa="filter-button-nearby"]
+
+    nearMe_text                 xpath      //span[contains(text(),'Near me')]
+
+========================================
+# Validation on desktop resolutions
+@on desktop
+========================================
+
+= Header section =
+    find_button:
+        text is "${local.find.button}"
+        height ~ 40px
+
+    language_selector:
+        right-of log_in 10 to 42px
+        css font-size is "14px"
+
+    listing_header:
+        height 100 to 250px
+        width ~ 887px
+
+    nearby-filter:
+        text is "${local.nearBy.filter}"
+
+#    near_me_text:
+#        text is "${local.nearMe.filter}"

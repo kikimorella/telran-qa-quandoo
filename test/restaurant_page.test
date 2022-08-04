@@ -1,0 +1,16 @@
+@@ table languages
+        | locale |
+        | en     |
+#        | de     |
+        | fi     |
+#        | fr     |
+        | it     |
+        | nl     |
+#        | tr     |
+
+@@ parameterized using languages
+Restaurant page test for ${locale} language
+    selenium chrome https://www.quandoo.de/${locale}/place/salzkruste-40757 1600x1200
+        properties localisation_properties/listing-page-${locale}.properties
+        run scripts/accept_cookies.js
+        check specs/restaurant_page.gspec
