@@ -1,12 +1,12 @@
 @@ table languages
         | locale |
         | en     |
-#        | de     |
+        | de     |
         | fi     |
-#        | fr     |
+        | fr     |
         | it     |
         | nl     |
-#        | tr     |
+        | tr     |
 
 @@ parameterized using languages
 Restaurant page test for ${locale} language

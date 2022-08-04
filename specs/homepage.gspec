@@ -7,8 +7,9 @@
     cr            xpath         //div[contains(text(),'2022')]/text()
 
     legal_menu-*        xpath         //*[@id="root"]/section/div[4]/div/div/div[1]/div/div[2]/div/ul/li/a
-    <!-- мы к оригинальному пути //*[@id="root"]/section/div[4]/div/div/div[1]/div/div[2]/div/ul добавили /li/a
-    чтоб тест бегал по элементам списка-->
+
+#   мы к оригинальному пути //*[@id="root"]/section/div[4]/div/div/div[1]/div/div[2]/div/ul добавили /li/a
+#   чтоб тест бегал по элементам списка
 
 #    imprint             xpath         //div[2]/div/ul/li/a
 #    privacy_policy      xpath         //div[2]/div/ul/li[2]/a

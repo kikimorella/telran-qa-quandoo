@@ -6,9 +6,8 @@
     language_selector           xpath      //div[@data-qa='lang-selector-toggle']
     listing_header              xpath      //div[@data-qa='listing-header']
     log_in                      xpath      //div[@data-qa='header-login']
-    nearby-filter               xpath      //*[@data-qa="filter-button-nearby"]
-
-    nearMe_text                 xpath      //span[contains(text(),'Near me')]
+    nearby_filter               xpath      //*[@data-qa="filter-button-nearby"]
+    near_me_text                xpath      //div[@data-qa='breadcrumbs']/span[2]/span
 
 ========================================
 # Validation on desktop resolutions
@@ -28,8 +27,8 @@
         height 100 to 250px
         width ~ 887px
 
-    nearby-filter:
+    nearby_filter:
         text is "${local.nearBy.filter}"
 
-#    near_me_text:
-#        text is "${local.nearMe.filter}"
+    near_me_text:
+        text is "${local.nearMe.filter}"
