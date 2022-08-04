@@ -1,0 +1,19 @@
+@@ table languages
+        | locale |
+        | en     |
+        | de     |
+        | fi     |
+        | fr     |
+        | it     |
+        | nl     |
+
+@@ parameterized using languages
+
+Listing page test for ${locale} language
+
+    selenium chrome https://www.quandoo.de/${locale}/restaurants-near-me 1600x1200
+
+        properties localisation_properties/listing-page-${locale}.properties
+        check specs/localisation_page.gspec
+
+        run scripts/accept_cookies.js
